@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { motion } from 'motion/react';
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export function EnhancedCursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -12,26 +12,30 @@ export function EnhancedCursor() {
 
     const handleMouseEnter = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      if (target.matches('button, a, [role="button"], input, .cursor-pointer')) {
+      if (
+        target.matches('button, a, [role="button"], input, .cursor-pointer')
+      ) {
         setIsHovering(true);
       }
     };
 
     const handleMouseLeave = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      if (target.matches('button, a, [role="button"], input, .cursor-pointer')) {
+      if (
+        target.matches('button, a, [role="button"], input, .cursor-pointer')
+      ) {
         setIsHovering(false);
       }
     };
 
-    document.addEventListener('mousemove', updateMousePosition);
-    document.addEventListener('mouseenter', handleMouseEnter, true);
-    document.addEventListener('mouseleave', handleMouseLeave, true);
+    document.addEventListener("mousemove", updateMousePosition);
+    document.addEventListener("mouseenter", handleMouseEnter, true);
+    document.addEventListener("mouseleave", handleMouseLeave, true);
 
     return () => {
-      document.removeEventListener('mousemove', updateMousePosition);
-      document.removeEventListener('mouseenter', handleMouseEnter, true);
-      document.removeEventListener('mouseleave', handleMouseLeave, true);
+      document.removeEventListener("mousemove", updateMousePosition);
+      document.removeEventListener("mouseenter", handleMouseEnter, true);
+      document.removeEventListener("mouseleave", handleMouseLeave, true);
     };
   }, []);
 
@@ -52,16 +56,22 @@ export function EnhancedCursor() {
           mass: 0.5,
         }}
         style={{
-          width: '24px',
-          height: '24px',
-          borderRadius: '50%',
-          background: isHovering 
-            ? 'linear-gradient(135deg, #0066ff, #00d2d3, #ff4757)'
-            : 'linear-gradient(135deg, #f39c12, #e67e22)',
+          width: "24px",
+          height: "24px",
+          borderRadius: "50%",
+          background: isHovering
+            ? "linear-gradient(135deg, #0066ff, #00d2d3, #ff4757)"
+            : "linear-gradient(135deg, #f39c12, #e67e22)",
           boxShadow: `
-            0 0 20px ${isHovering ? 'rgba(0, 102, 255, 0.6)' : 'rgba(243, 156, 18, 0.6)'},
-            0 0 40px ${isHovering ? 'rgba(0, 210, 211, 0.4)' : 'rgba(243, 156, 18, 0.4)'},
-            0 0 60px ${isHovering ? 'rgba(255, 71, 87, 0.3)' : 'rgba(230, 126, 34, 0.3)'}
+            0 0 20px ${
+              isHovering ? "rgba(0, 102, 255, 0.6)" : "rgba(243, 156, 18, 0.6)"
+            },
+            0 0 40px ${
+              isHovering ? "rgba(0, 210, 211, 0.4)" : "rgba(243, 156, 18, 0.4)"
+            },
+            0 0 60px ${
+              isHovering ? "rgba(255, 71, 87, 0.3)" : "rgba(230, 126, 34, 0.3)"
+            }
           `,
           opacity: isHovering ? 0.9 : 0.7,
         }}
@@ -80,22 +90,23 @@ export function EnhancedCursor() {
         transition={{
           scale: { type: "spring", stiffness: 300, damping: 30, mass: 0.8 },
           opacity: { type: "spring", stiffness: 300, damping: 30, mass: 0.8 },
-          rotate: { duration: 8, repeat: Infinity, ease: "linear" }
+          rotate: { duration: 8, repeat: Infinity, ease: "linear" },
         }}
         style={{
-          width: '60px',
-          height: '60px',
-          borderRadius: '50%',
-          background: 'conic-gradient(from 0deg, #0066ff, #00d2d3, #f39c12, #ff4757, #0066ff)',
-          padding: '2px',
+          width: "60px",
+          height: "60px",
+          borderRadius: "50%",
+          background:
+            "conic-gradient(from 0deg, #0066ff, #00d2d3, #f39c12, #ff4757, #0066ff)",
+          padding: "2px",
         }}
       >
         <div
           style={{
-            width: '100%',
-            height: '100%',
-            borderRadius: '50%',
-            background: 'rgba(15, 15, 35, 0.8)',
+            width: "100%",
+            height: "100%",
+            borderRadius: "50%",
+            background: "rgba(15, 15, 35, 0.8)",
           }}
         />
       </motion.div>
@@ -115,7 +126,7 @@ export function EnhancedCursor() {
               key={i}
               className="absolute"
               animate={{
-                rotate: [i * 60, (i * 60) + 360],
+                rotate: [i * 60, i * 60 + 360],
                 scale: [1, 1.3, 1],
                 opacity: [0.6, 1, 0.6],
               }}
@@ -123,26 +134,38 @@ export function EnhancedCursor() {
                 duration: 3,
                 repeat: Infinity,
                 delay: i * 0.2,
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
               style={{
-                width: '100px',
-                height: '100px',
-                left: '50px',
-                top: '50px',
-                transformOrigin: '0 0',
+                width: "100px",
+                height: "100px",
+                left: "50px",
+                top: "50px",
+                transformOrigin: "0 0",
               }}
             >
               <div
                 style={{
-                  width: '3px',
-                  height: '20px',
+                  width: "3px",
+                  height: "20px",
                   background: `linear-gradient(180deg, 
-                    ${i % 3 === 0 ? '#0066ff' : i % 3 === 1 ? '#00d2d3' : '#ff4757'}, 
+                    ${
+                      i % 3 === 0
+                        ? "#0066ff"
+                        : i % 3 === 1
+                        ? "#00d2d3"
+                        : "#ff4757"
+                    }, 
                     transparent
                   )`,
-                  boxShadow: `0 0 15px ${i % 3 === 0 ? '#0066ff' : i % 3 === 1 ? '#00d2d3' : '#ff4757'}`,
-                  borderRadius: '2px',
+                  boxShadow: `0 0 15px ${
+                    i % 3 === 0
+                      ? "#0066ff"
+                      : i % 3 === 1
+                      ? "#00d2d3"
+                      : "#ff4757"
+                  }`,
+                  borderRadius: "2px",
                 }}
               />
             </motion.div>
