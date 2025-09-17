@@ -1,6 +1,11 @@
 {
   "framework": "vite",
-  "buildCommand": "npm run build",
+  "buildCommand": "chmod +x node_modules/.bin/* && npm run build",
   "outputDirectory": "dist",
-  "installCommand": "npm install"
+  "installCommand": "npm install",
+  "functions": {
+    "app/**/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  }
 }
