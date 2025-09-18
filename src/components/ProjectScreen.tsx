@@ -893,7 +893,7 @@ export function ProjectScreen({ project, onNavigate }: ProjectScreenProps) {
                 {/* Titre en bas de l'image */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
                   <h3
-                    className="text-2xl mb-2"
+                    className="text-lg md:text-2xl mb-2"
                     style={{
                       background: "linear-gradient(135deg, #00d2d3, #01a3a4)",
                       WebkitBackgroundClip: "text",
@@ -904,6 +904,7 @@ export function ProjectScreen({ project, onNavigate }: ProjectScreenProps) {
                   >
                     {selectedImage.title}
                   </h3>
+
                   <p className="text-white/80">{selectedImage.alt}</p>
                 </div>
               </div>

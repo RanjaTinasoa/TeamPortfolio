@@ -189,7 +189,7 @@ export function WelcomeScreen({ onEnter }: WelcomeScreenProps) {
               transition={{ duration: 0.6 }}
             />
             <span className="relative flex items-center">
-              Enter Portfolio
+              Entrer dans le portfolio
               <motion.div
                 animate={{ x: [0, 5, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}

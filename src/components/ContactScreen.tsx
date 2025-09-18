@@ -22,16 +22,16 @@ const contactData = {
   ekena: {
     name: "Ekena",
     role: "Développeur Back-End",
-    email: "rakotoson16@email.com",
+    email: "ekenarakotoson16@gmail.com",
     phone: "+261 38 66 147 70",
-    github: "github.com/kentix",
+    github: "github.com/kentix16",
   },
   ranja: {
     name: "Ranja",
     role: "Développeur Front-End",
-    email: "ranjatinasoa@email.com",
+    email: "ranjatinasoa@gmail.com",
     phone: "+261 38 10 006 00",
-    github: "github.com/ranjatinasoa",
+    github: "github.com/RanjaTinasoa",
   },
 };
 

@@ -22,8 +22,7 @@ const projects = [
     id: "employee",
     title: "Gestion de salarié",
     subtitle: "Gestion simplifiée des effectifs",
-    description:
-      "Un système complet de gestion des employés avec suivi des présences, analyse des performances et automatisation des RH.",
+    description: "Un système simple de gestion des employés.",
     image:
       "https://images.unsplash.com/photo-1654166602082-d18e7cd4bdac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbXBsb3llZSUyMG1hbmFnZW1lbnQlMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzU3Njc1NDM5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
   },
